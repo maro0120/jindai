@@ -17,6 +17,7 @@
 			</div>
 		</div>
 		<div class="container2">
+			<div class="box6-sp" style=""></div>
 			<div class="box5" style=""></div>
 			<div class="box6" style=""></div>
 			<div class="box7" style="display:flex;align-items:center;justify-content: center;">
@@ -46,8 +47,8 @@ body {
 }
 .container2 {
   display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  grid-template-rows: 60% 20% 20%;
+  grid-template-columns: 1fr 0.3fr 0.3fr;
+  grid-template-rows: 70% 15% 15%;
   height: 100vh;
 }
 .container3 {
@@ -78,7 +79,7 @@ body {
 }
 .box1 {
   grid-column: 1;
-  grid-row: 1/ 3;
+  grid-row: 1 / 3;
   background: #0544A9;
 }
 .box2 {
@@ -106,11 +107,17 @@ body {
   background: #111111;
 }
 .box5 {
-  grid-column: span 2;
-  grid-row: 1;
+  grid-column: span 3;
+
   background-image:url("./photo_background.png");
   background-size: cover;
   background-position: 40%;
+}
+.box6-sp {
+  grid-column: span 2;
+
+  background-color: #002E92;
+  display: none;
 }
 .box6 {
   grid-column: 1;
@@ -119,12 +126,12 @@ body {
 }
 .box7 {
   grid-column: span 2;
-  grid-row: 2;
+  grid-row: span 1;
   background-color: #022676;
 }
 .box8 {
   grid-column: span 2;
-  grid-row: 3;
+  grid-row: span 1;
   background-color: #0947AA;
 }
 .br-sp {
@@ -191,8 +198,15 @@ h2 {
 	  line-height: 100%;
 	  font-size: 2rem;
 	}
+	.container2 {
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 20% 50% 15% 15%;
+	}
 	.box6 {
 	 display: none;
+	}
+	.box6-sp {
+	 display: block;
 	}
 }
 </style>
